@@ -174,6 +174,12 @@ function showResults() {
 
     finalScoreSpan.textContent = score;
 
+    confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 }
+    });
+    
     const percentage = (score/quizQuestions.length) * 100;
 
     if(percentage === 100) {
@@ -353,3 +359,4 @@ async function generateQuizFromURL(articleURL) {
   }
 
   startButton.addEventListener("click", handleGenerateFromURL);
+
